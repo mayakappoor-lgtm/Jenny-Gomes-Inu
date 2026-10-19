@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jenny Gomes Inc – Immigration services and jobs</title>
+<meta name="description" content="Jenny Gomes Inc: free assessment, visa programs, job listings and step-by-step immigration support.">
+<meta name="theme-color" content="#12263a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f4f7fa;--surface:#fff;--ink:#12263a;--muted:#55677a;--line:#d5dee8;--accent:#1f4fd8;--accent-ink:#fff;--gold:#b7791f;--ok:#0e7c66;--ok-bg:#dff3ec;--hero:#12263a;--hero-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1823;--surface:#16263a;--ink:#eaf1f8;--muted:#9fb2c6;--line:#2a3d54;--accent:#6e93ff;--accent-ink:#0e1823;--gold:#e0a84a;--ok:#5fd3b3;--ok-bg:#12382f;--hero:#0a121b}}
+:root[data-theme="dark"]{--bg:#0e1823;--surface:#16263a;--ink:#eaf1f8;--muted:#9fb2c6;--line:#2a3d54;--accent:#6e93ff;--accent-ink:#0e1823;--gold:#e0a84a;--ok:#5fd3b3;--ok-bg:#12382f;--hero:#0a121b}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Public Sans",system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.bar{background:var(--hero);color:var(--hero-ink);font-size:.85rem}
+.bar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+.bar a{color:inherit}
+header.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.mono{width:36px;height:36px;border-radius:8px;background:var(--ink);color:var(--surface);display:grid;place-items:center;font-size:.95rem;border-bottom:3px solid var(--gold)}
+nav{display:flex;flex-wrap:wrap;gap:2px}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;padding:6px 9px;border-radius:6px}
+nav a:hover{background:var(--bg)}
+nav a[aria-current=page]{background:var(--ink);color:var(--surface)}
+.page{display:none;padding-bottom:24px}
+.page.on{display:block;animation:in .45s ease both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero{background:var(--hero);color:var(--hero-ink);padding:60px 0 8px}
+.hero h1{font-size:clamp(2.1rem,7vw,3.7rem);line-height:1.04;letter-spacing:-.03em;margin:0 0 16px;font-weight:800;max-width:14em}
+.hero p{max-width:36em;font-size:1.1rem;opacity:.88;margin:0 0 24px}
+.anim .hero h1{animation:rise .8s .05s cubic-bezier(.2,.7,.2,1) both}
+.anim .hero p,.anim .hero .row{animation:rise .8s .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:11px 18px;border-radius:6px;font:inherit;font-weight:600;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:inherit;border:1.5px solid currentColor}
+.hero .btn:not(.alt){background:var(--gold);color:#12263a}
+h2{font-size:1.6rem;letter-spacing:-.02em;margin:40px 0 12px}
+h2+.lead{margin-top:-6px}
+.lead{color:var(--muted);max-width:42em}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card.prog{border-inline-start:4px solid var(--gold)}
+.card h3{margin:0 0 6px;font-size:1.1rem}
+.card p{margin:0 0 6px;color:var(--muted)}
+.card small{color:var(--muted)}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px}
+.stats b{display:block;font-size:2rem;color:var(--gold)}
+.stats span{font-size:.9rem;opacity:.85}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 16px;padding-inline-start:60px;position:relative}
+.steps li::before{content:counter(s);position:absolute;inset-inline-start:16px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;display:grid;place-items:center}
+.steps b{display:block}
+.rv{opacity:1}
+.anim .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.anim .rv.vis{opacity:1;transform:none}
+blockquote{margin:0;font-size:1.05rem}
+.who{margin-top:10px;font-weight:600;font-size:.92rem}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+summary{padding:14px 16px;font-weight:600;cursor:pointer}
+details p{margin:0;padding:0 16px 14px;color:var(--muted)}
+label{font-size:.85rem;font-weight:600;display:block;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px}
+textarea{min-height:110px}
+.filters{display:grid;gap:10px;grid-template-columns:1fr;margin-bottom:12px}
+@media(min-width:700px){.filters{grid-template-columns:2fr 1fr 1fr}}
+.meta{color:var(--muted);font-size:.93rem;margin:0 0 8px}
+.tag{display:inline-block;background:var(--ok-bg);color:var(--ok);font-weight:600;font-size:.8rem;padding:3px 9px;border-radius:99px;margin-right:6px}
+.tag.plain{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.box{max-width:500px}
+.msg{margin-top:12px;padding:12px;border-radius:6px;background:var(--ok-bg);color:var(--ok);font-weight:600;display:none}
+.note{font-size:.9rem;color:var(--muted);margin-top:20px;padding:12px 14px;border-left:4px solid var(--gold);background:var(--surface)}
+.cta{background:var(--hero);color:var(--hero-ink);border-radius:12px;padding:28px;margin-top:40px}
+.cta h2{margin-top:0}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0;color:var(--muted);font-size:.9rem}
+footer .cols{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:18px}
+footer a{color:var(--muted)}
+.set{display:flex;gap:8px;flex-wrap:wrap}
+.set button{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer}
+.form{display:grid;gap:0 14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:8px}
+.form .full{grid-column:1/-1}
+.form h3{margin:22px 0 0;font-size:1.1rem;padding-top:14px;border-top:1px solid var(--line)}
+.fl a{display:inline-block;margin:0 12px 4px 0;color:var(--muted)}
+.steps b a{color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.bar select{width:auto;padding:2px 6px;font-size:.85rem}
+.bar label{margin:0}
+.band{background:var(--hero)}
+.trust{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.trust li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--muted)}
+.lf{width:20px;height:20px;flex:none;margin-top:2px}
+figure.card{padding:0;overflow:hidden;margin:0}
+figure.card svg{display:block;width:100%;height:auto}
+figcaption{padding:12px 14px}
+figcaption span{color:var(--muted);font-size:.92rem}
+body{top:0!important}
+.goog-te-banner-frame,.skiptranslate iframe{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.anim .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="anim">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="leaf" viewBox="0 0 100 100"><polygon points="50,2 57,20 65,14 63,36 79,28 76,44 97,40 87,57 95,66 71,73 76,86 54,79 53,98 47,98 46,79 24,86 29,73 5,66 13,57 3,40 24,44 21,28 37,36 35,14 43,20" fill="#d52b1e"/></symbol></svg>
+<div id="gt" style="position:absolute;left:-9999px" aria-hidden="true"></div>
+<div class="bar"><div class="wrap"><span>Free first assessment</span><span class="lg"><label for="lang" class="sr">Language</label><select id="lang" translate="no"></select></span><span><a id="mail1" href="#"></a></span></div></div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#home" translate="no"><span class="mono">JG</span>Jenny Gomes Inc</a>
+  <nav id="nav" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#jobs">Jobs</a><a href="#resources">Resources</a><a href="#testimonies">Testimonies</a><a href="#contact">Contact</a><a href="#assess">Free assessment</a><a href="#account">Create account</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="page" id="home" data-title="Home">
+  <div class="hero"><div class="wrap">
+    <h1>Your move abroad, handled with care.</h1>
+    <p>Visa guidance, document review and jobs from employers that sponsor. Start with a free assessment and learn which route fits you.</p>
+    <div class="row"><a class="btn" href="#assess">Get a free assessment</a><a class="btn alt" href="#jobs">Browse jobs</a></div>
+    <div class="stats demo"><div><b data-n="1200">0</b><span>Applicants guided</span></div><div><b data-n="85">0</b><span>Partner employers</span></div><div><b data-n="14">0</b><span>Countries covered</span></div></div>
+  </div></div>
+  <div class="band"><svg viewBox="0 0 1000 170" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of Canadian landmarks: Rocky Mountains, Parliament’s Peace Tower and the CN Tower" style="display:block;width:100%;height:auto;max-height:230px">
+    <path d="M0 170V96l90-60 70 44 100-70 110 86 80-44 120 70 90-52 110 66 100-40 130 60V170z" fill="#1f3956"/>
+    <path d="M0 170V124l110-48 90 48 90-56 120 56 100-30 120 30 120-44 250 44V170z" fill="#183049"/>
+    <g fill="#4a6a90"><rect x="330" y="118" width="110" height="32"/><rect x="640" y="110" width="22" height="40"/><rect x="668" y="124" width="20" height="26"/><rect x="712" y="104" width="26" height="46"/><rect x="744" y="126" width="22" height="24"/></g>
+    <g fill="#5d7fa8"><rect x="372" y="84" width="26" height="66"/><path d="M370 84l15-38 15 38z"/><rect x="697" y="46" width="6" height="104"/><ellipse cx="700" cy="86" rx="16" ry="6"/><rect x="699" y="18" width="2" height="30"/></g>
+    <circle cx="385" cy="100" r="5" fill="#12263a"/>
+    <use href="#leaf" x="860" y="22" width="58" height="58"/>
+    <path d="M0 170V152c180-16 420 6 1000-12V170z" style="fill:var(--bg)"/>
+  </svg></div>
+  <div class="wrap">
+    <ul class="trust rv">
+      <li><svg class="lf" aria-hidden="true"><use href="#leaf"/></svg>Independent company. Not part of, or endorsed by, the Government of Canada.</li>
+      <li><svg class="lf" aria-hidden="true"><use href="#leaf"/></svg>No one can guarantee approval. Only IRCC decides your application.</li>
+      <li><svg class="lf" aria-hidden="true"><use href="#leaf"/></svg>Government fees are paid directly to the government. We never sell guaranteed results.</li>
+      <li><svg class="lf" aria-hidden="true"><use href="#leaf"/></svg>We never need your IRCC password. Keep it private.</li>
+    </ul>
+    <h2 class="rv">Immigration programs</h2>
+    <p class="lead">Choose a program to see who it suits and what you usually need. <a href="#services">See all services</a>.</p>
+    <div class="grid" id="progHome"></div>
+    <h2 class="rv">Canada at a glance</h2>
+    <div class="grid" id="explore"></div>
+    <h2 class="rv">How it works</h2>
+    <ol class="steps" id="stepsHome"></ol>
+    <h2 class="rv">Why choose us</h2>
+    <div class="grid" id="whyList"></div>
+    <div class="cta rv"><h2>Not sure where to start?</h2><p>Tell us about your education, work and goals. We reply with the routes worth considering.</p><a class="btn" style="background:var(--gold);color:#12263a" href="#assess">Start my free assessment</a></div>
+    <p class="note demo">Figures shown are samples. Replace them with your real numbers.</p>
+  </div>
+</section>
+
+<section class="page" id="about" data-title="About us"><div class="wrap">
+  <h2>About Jenny Gomes Inc</h2>
+  <p class="lead">We are an immigration support and recruitment company. We help people understand visa routes, prepare complete applications and meet employers who hire internationally.</p>
+  <div class="grid">
+    <div class="card rv"><h3>Our mission</h3><p>Make moving for work, study or family clear, fair and free of scams.</p></div>
+    <div class="card rv"><h3>Our values</h3><p>Honest timelines, official fees only and no promises we cannot keep.</p></div>
+    <div class="card rv"><h3>Our team</h3><p>Advisers, recruiters and document specialists. Add team photos and bios here.</p></div>
+  </div>
+  <div id="cred"></div>
+  <p class="row"><a class="btn" href="#services">See our services</a><a class="btn alt" href="#contact">Contact us</a></p>
+</div></section>
+
+<section class="page" id="services" data-title="Services"><div class="wrap">
+  <h2>Services and programs</h2>
+  <p class="lead">Every file starts with a free assessment. Requirements vary by country and change often, so we confirm them on the official government site before you apply.</p>
+  <div class="grid" id="progAll"></div>
+  <h2 class="rv">Our process</h2>
+  <ol class="steps" id="stepsAll"></ol>
+  <p class="note">We give general information, not legal advice. Visa decisions are made only by government authorities.</p>
+  <p class="row"><a class="btn" href="#assess">Start my free assessment</a><a class="btn alt" href="#jobs">Browse jobs</a></p>
+</div></section>
+
+<section class="page" id="jobs" data-title="Jobs"><div class="wrap">
+  <h2>Jobs in Canada</h2>
+  <p class="lead">Postings from Canada’s national Job Bank, for people abroad and people already living in Canada. Search up to 100 jobs.</p>
+  <p class="note" id="snote">Showing sample listings. Live Job Bank jobs appear here once <b>jobs.json</b> is added to your site.</p>
+  <div class="grid">
+    <div class="card prog"><h3>If you are outside Canada</h3><p>Most employers need you to have legal permission to work. Look for jobs marked “Hiring workers from abroad”, then <a href="#assess" data-goal="Work">check your work permit options</a>.</p></div>
+    <div class="card prog"><h3>If you live in Canada</h3><p>Citizens and permanent residents can apply to any posting. Temporary residents should check the conditions on their permit first. See the <a href="#resources">FAQs</a>.</p></div>
+  </div>
+  <div class="filters" style="margin-top:18px">
+    <div><label for="q">Job title, employer or city</label><input id="q" type="search" placeholder="e.g. nurse, Calgary"></div>
+    <div><label for="country">Province or territory</label><select id="country"><option value="">All provinces and territories</option></select></div>
+    <div><label for="field">Category</label><select id="field"><option value="">All categories</option></select></div>
+  </div>
+  <label style="display:flex;gap:8px;align-items:center;margin:0 0 12px"><input id="sp" type="checkbox" style="width:20px;height:20px"> Hiring workers from abroad (LMIA) only</label>
+  <p id="count" class="lead" aria-live="polite"></p>
+  <div id="list"></div>
+  <p><button class="btn" id="more" style="display:none">Show more jobs</button></p>
+  <p class="note" id="src"></p>
+  <p class="note">Not sure which permit fits a job? <a href="#assess">Start your free assessment</a> or read the <a href="#resources">FAQs</a>.</p>
+</div></section>
+
+<section class="page" id="resources" data-title="Resources"><div class="wrap">
+  <h2>Resources and FAQs</h2>
+  <p class="lead">Short answers to what applicants ask most.</p>
+  <div id="faq"></div>
+  <h2>Document checklist</h2>
+  <div class="grid">
+    <div class="card"><h3>Identity</h3><p>Passport, photos, birth certificate.</p></div>
+    <div class="card"><h3>Education</h3><p>Diplomas, transcripts, credential assessment.</p></div>
+    <div class="card"><h3>Work</h3><p>Reference letters, contracts, pay slips.</p></div>
+    <div class="card"><h3>Background</h3><p>Police certificates and medical exam if required.</p></div>
+  </div>
+  <p class="note">Scam warning: no one can guarantee a visa. Pay only official fees on government websites.</p>
+  <p class="row"><a class="btn" href="#assess">Start my free assessment</a><a class="btn alt" href="#contact">Ask a question</a></p>
+</div></section>
+
+<section class="page" id="testimonies" data-title="Testimonies"><div class="wrap">
+  <h2>Testimonies</h2>
+  <div class="grid">
+    <div class="card rv"><blockquote>“They explained every document I needed and I never felt lost.”</blockquote><div class="who">Sample client, nurse</div></div>
+    <div class="card rv"><blockquote>“I got three interviews in my first month.”</blockquote><div class="who">Sample client, developer</div></div>
+    <div class="card rv"><blockquote>“Clear prices and no false promises. That is rare.”</blockquote><div class="who">Sample client, electrician</div></div>
+    <div class="card rv"><blockquote>“My family application was checked twice before filing.”</blockquote><div class="who">Sample client, family sponsor</div></div>
+  </div>
+  <p class="note demo">These are placeholders. Publish only real testimonies with the client’s permission.</p>
+  <p class="row"><a class="btn" href="#assess">Start my free assessment</a><a class="btn alt" href="#services">See services</a></p>
+</div></section>
+
+<section class="page" id="assess" data-title="Free assessment"><div class="wrap">
+  <h2>Free assessment</h2>
+  <p class="lead">Our questions follow the topics in the Government of Canada’s official Come to Canada tool: your goal, nationality, age, language, family, education, work, funds and job offer. We are not IRCC and this is not an official form.</p>
+  <h2 style="font-size:1.25rem">How to start</h2>
+  <ol class="steps">
+    <li><b>Try the official tool</b>It is free and takes 10–15 minutes. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/come-canada-tool.html" target="_blank" rel="noopener">Open Come to Canada</a>. Results are for reference only and do not affect any decision.</li>
+    <li><b>Save your Personal Reference Code</b>The tool gives you a code that links your answers to your IRCC online account.</li>
+    <li><b>Answer our questions below</b>Be as accurate as you can. Add your code in the last box.</li>
+    <li><b>We review and reply</b>We explain your options, timelines and the documents you need. <a href="#services">See our services</a> or <a href="#jobs">browse jobs</a> meanwhile.</li>
+  </ol>
+  <div class="form" id="aform"></div>
+  <p><button class="btn" id="fsend">Send my assessment</button></p>
+  <div class="msg" id="fmsg" role="status"></div>
+  <p class="note">Your answers go by email to our team. This site stores nothing. Questions? <a href="#contact">Contact us</a>.</p>
+</div></section>
+
+<section class="page" id="contact" data-title="Contact us"><div class="wrap box">
+  <h2>Contact us</h2>
+  <label for="cn">Your name</label><input id="cn" autocomplete="name">
+  <label for="ce">Your email</label><input id="ce" type="email" autocomplete="email">
+  <label for="cm">Message</label><textarea id="cm"></textarea>
+  <p><button class="btn" id="csend">Send message</button></p>
+  <div class="msg" id="cmsg" role="status"></div>
+  <p class="lead">Or email <a id="mail2" href="#"></a></p>
+  <p>New here? <a href="#assess">Start with a free assessment</a> or read the <a href="#resources">FAQs</a>.</p>
+</div></section>
+
+<section class="page" id="account" data-title="Create account"><div class="wrap box">
+  <h2>Create an account</h2>
+  <p class="lead">Enter your name and email. We open an email to our team to confirm your request. This site stores nothing.</p>
+  <label for="an">Full name</label><input id="an" autocomplete="name">
+  <label for="ae">Email</label><input id="ae" type="email" autocomplete="email">
+  <p><button class="btn" id="asend">Request confirmation</button></p>
+  <div class="msg" id="amsg" role="status"></div>
+  <p>Next: <a href="#assess">free assessment</a> or <a href="#jobs">browse jobs</a>.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Jenny Gomes Inc</b><br>Immigration guidance and international jobs.</div>
+    <div class="fl"><b>Pages</b><br><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#jobs">Jobs</a><a href="#resources">Resources</a><a href="#testimonies">Testimonies</a><a href="#assess">Free assessment</a><a href="#contact">Contact</a><a href="#account">Create account</a></div>
+    <div><b>Contact</b><br><a id="mail3" href="#"></a></div>
+  </div>
+  <div class="set"><span>© 2026 Jenny Gomes Inc. Independent company, not affiliated with or endorsed by the Government of Canada or IRCC. General information only, not legal advice.</span><button id="theme" aria-label="Toggle dark mode">Theme</button><button id="motion" aria-pressed="true">Animations: on</button></div>
+</div></footer>
+
+<script>
+const CFG={company:"Jenny Gomes Inc",email:"hello@example.com",demo:true,repName:"",licence:"",regNo:"",address:"",phone:"",heroImage:""};
+const PROGS=[
+["Skilled worker","For people with qualifying education and work experience.","Typical needs: language test, credential check, work references.","Live permanently"],
+["Work permits","For people with a job offer from a sponsoring employer.","Typical needs: offer letter, employer documents, proof of skills.","Work"],
+["Study permits","For international students admitted to a school.","Typical needs: acceptance letter, proof of funds, study plan.","Study"],
+["Family sponsorship","For spouses, partners, children and parents.","Typical needs: proof of relationship, income evidence, forms.","Join family in Canada"],
+["Visitor visas","For tourism, family visits and short business trips.","Typical needs: itinerary, funds, ties to home country.","Visit or transit"],
+["Business and investor","For founders and investors starting or buying a business.","Typical needs: business plan, source of funds, net worth proof.","Live permanently"]
+];
+const STEPS=[["Try the official Come to Canada tool","Free and takes 10–15 minutes. Answers are for reference only.","https://www.canada.ca/en/immigration-refugees-citizenship/services/come-canada-tool.html"],["Send us your assessment","Share the same details and your Personal Reference Code.","#assess"],["Choose a route","We explain the options and realistic timelines.","#services"],["Prepare documents","We check every paper before filing.","#resources"],["Apply officially","Submit on the government portal. You pay only official fees.","#contact"],["Find work and settle in","Browse sponsoring employers, then plan housing and registration.","#jobs"]];
+const WHY=[["Plain language","No jargon. You know what each step means."],["Transparent fees","You see our fee and the official fees before you start."],["Jobs and visas together","Search sponsoring employers on the same site."]];
+const FAQ=[["Where do I start?","Try the free Come to Canada tool on the official Government of Canada website, then send us your answers and your Personal Reference Code through our free assessment page."],["How long does the process take?","It depends on the program and country. We give a realistic range after your assessment."],["Can you guarantee a visa?","No. Only the government decides. We help you submit a complete, accurate application."],["Do I need a job offer first?","Some programs require one and others do not. The assessment tells you which applies to you."],["How much does it cost?","The first assessment is free. Government fees are paid directly to the authority."],["Who can charge for Canadian immigration advice?","Only authorized representatives: licensed consultants (RCICs) in good standing with the College of Immigration and Citizenship Consultants, lawyers who are members of a Canadian law society, and Quebec notaries. Check the CICC public register before you pay anyone."],["Will my representative be named on my application?","Yes. An authorized representative is named on your file with the IRCC form Use of a Representative (IMM 5476). Be careful with anyone who asks to stay hidden or asks for your IRCC account password."],["Can I read this site in my language?","Yes. Use the language menu at the top of the page. Your browser can also translate any page. Automatic translation can contain mistakes, so confirm important details with us."],["Where do the jobs come from?","From Canada’s national Job Bank open data, which is refreshed monthly. Postings may close, so always confirm details on Job Bank before you apply."],["Can I apply from outside Canada?","Often yes, but most employers need you to have legal permission to work in Canada. Some hire workers from abroad, usually through a Labour Market Impact Assessment (LMIA) or another work permit route. Use our free assessment to find your route."],["Do you store my data?","This website stores nothing. Details you send by email are handled by our team."]];
+const SAMPLE=[
+{t:"Registered Nurse",co:"Sample Health Centre",loc:"Toronto",prov:"Ontario",f:"Health",pay:"CA$70k–85k",lmia:true,d:"Hospital ward role. Sample listing."},
+{t:"Software Developer",co:"Sample Tech Inc",loc:"Vancouver",prov:"British Columbia",f:"Natural and applied sciences",pay:"CA$80k–105k",lmia:false,d:"Backend team. Sample listing."},
+{t:"Electrician",co:"Sample Electric Ltd",loc:"Calgary",prov:"Alberta",f:"Trades, transport and equipment operators",pay:"CA$32–42/hour",lmia:true,d:"Commercial installs. Sample listing."},
+{t:"Home Support Worker",co:"Sample Care Services",loc:"Halifax",prov:"Nova Scotia",f:"Health",pay:"CA$20–24/hour",lmia:true,d:"Community care. Sample listing."},
+{t:"Data Analyst",co:"Sample Analytics",loc:"Montréal",prov:"Quebec",f:"Business, finance and administration",pay:"CA$65k–80k",lmia:false,d:"Hybrid role. Sample listing."},
+{t:"Civil Engineer",co:"Sample Builders",loc:"Winnipeg",prov:"Manitoba",f:"Natural and applied sciences",pay:"CA$85k–110k",lmia:false,d:"Infrastructure projects. Sample listing."}
+];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const progCard=(p,full)=>`<div class="card prog rv"><h3>${esc(p[0])}</h3><p>${esc(p[1])}</p>${full?`<small>${esc(p[2])}</small>`:""}<p style="margin-top:10px"><a href="#assess" data-goal="${esc(p[3])}">Check my eligibility</a></p></div>`;
+$("progHome").innerHTML=PROGS.map(p=>progCard(p,false)).join("");
+$("progAll").innerHTML=PROGS.map(p=>progCard(p,true)).join("");
+const stepList=STEPS.map(s=>{const x=s[2][0]==="h";return `<li class="rv"><b><a href="${s[2]}"${x?' target="_blank" rel="noopener"':""}>${esc(s[0])}</a></b>${esc(s[1])}</li>`}).join("");
+$("stepsHome").innerHTML=stepList;$("stepsAll").innerHTML=stepList;
+$("whyList").innerHTML=WHY.map(w=>`<div class="card rv"><h3>${esc(w[0])}</h3><p>${esc(w[1])}</p></div>`).join("");
+$("faq").innerHTML=FAQ.map(f=>`<details><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join("");
+["mail1","mail2","mail3"].forEach(i=>{$(i).href="mailto:"+CFG.email;$(i).textContent=CFG.email;$(i).translate=false});
+// routing
+const pages=[...document.querySelectorAll(".page")];
+function route(){
+  const id=(location.hash||"#home").slice(1);const p=$(id)&&$(id).classList.contains("page")?id:"home";
+  pages.forEach(s=>s.classList.toggle("on",s.id===p));
+  document.querySelectorAll("#nav a").forEach(a=>{a.removeAttribute("aria-current");if(a.getAttribute("href")==="#"+p)a.setAttribute("aria-current","page")});
+  document.title=$(p).dataset.title+" – "+CFG.company;
+  window.scrollTo(0,0);reveal();if(p==="home")count();
+}
+addEventListener("hashchange",route);
+let io;
+function reveal(){
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll(".page.on .rv").forEach(el=>{el.classList.remove("vis");io.observe(el)});
+}
+function count(){
+  document.querySelectorAll("[data-n]").forEach(el=>{
+    const n=+el.dataset.n;if(!document.body.classList.contains("anim")){el.textContent=n+"+";return}
+    let t0=null;const step=t=>{t0=t0||t;const k=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*k)+(k===1?"+":"");if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step);
+  });
+}
+// jobs
+let JOBS=SAMPLE,SHOWN=20;
+const fillSel=(id,key)=>{const el=$(id),cur=el.value;el.length=1;[...new Set(JOBS.map(j=>j[key]).filter(Boolean))].sort().forEach(v=>el.add(new Option(v,v)));el.value=cur};
+const safe=u=>/^https:\/\//.test(u||"");
+const card=j=>`<article class="card" style="margin-bottom:12px"><h3>${esc(j.t)}</h3><p class="meta">${[j.co,[j.loc,j.prov].filter(Boolean).join(", "),j.pay].filter(Boolean).map(esc).join(" · ")}</p>${j.d?`<p>${esc(j.d)}</p>`:""}<p style="margin-top:10px">${j.lmia===true?'<span class="tag">Hiring workers from abroad (LMIA)</span>':""}${j.f?`<span class="tag plain">${esc(j.f)}</span>`:""}${j.posted?`<span class="tag plain">Posted ${esc(j.posted)}</span>`:""}</p>${safe(j.url)?`<a class="btn" style="margin-top:6px" href="${esc(j.url)}" target="_blank" rel="noopener">View on Job Bank</a> `:`<a class="btn" style="margin-top:6px" href="mailto:${CFG.email}?subject=${encodeURIComponent("Question about: "+j.t)}">Ask about this job</a> `}<a class="btn alt" style="margin-top:6px" href="#assess" data-goal="Work">Check my eligibility</a></article>`;
+function jobs(reset){
+  if(reset===true)SHOWN=20;
+  const q=$("q").value.trim().toLowerCase(),c=$("country").value,f=$("field").value,sp=$("sp").checked;
+  const r=JOBS.filter(j=>(!q||[j.t,j.co,j.loc,j.d].join(" ").toLowerCase().includes(q))&&(!c||j.prov===c)&&(!f||j.f===f)&&(!sp||j.lmia===true));
+  $("count").textContent=r.length+(r.length===1?" job found":" jobs found");
+  $("list").innerHTML=r.length?r.slice(0,SHOWN).map(card).join(""):`<div class="card">No jobs match. Clear a filter or try another keyword.</div>`;
+  $("more").style.display=r.length>SHOWN?"inline-block":"none";
+}
+async function loadJobs(){
+  try{
+    const r=await fetch("jobs.json",{cache:"no-store"});if(!r.ok)throw 0;
+    const d=await r.json();if(!d.jobs||!d.jobs.length)throw 0;
+    JOBS=d.jobs.slice(0,100);
+    $("src").innerHTML=`Jobs from <a href="https://www.jobbank.gc.ca/home" target="_blank" rel="noopener">Job Bank</a> (Employment and Social Development Canada)${d.updated?`, updated ${esc(d.updated)}`:""}. Contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada" target="_blank" rel="noopener">Open Government Licence – Canada</a>. Postings may have closed, so confirm details on Job Bank.`;
+    $("snote").style.display="none";
+  }catch(e){$("src").style.display="none"}
+  fillSel("country","prov");fillSel("field","f");jobs(true);
+}
+$("more").onclick=()=>{SHOWN+=20;jobs()};
+["q","country","field","sp"].forEach(id=>$(id).addEventListener("input",()=>jobs(true)));
+fillSel("country","prov");fillSel("field","f");jobs(true);loadJobs();
+// forms: email only, nothing stored
+const ok=e=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e);
+function say(id,t,good){const m=$(id);m.style.display="block";m.textContent=t;m.style.background=good?"":"var(--bg)";m.style.color=good?"":"var(--ink)"}
+const mail=(s,b)=>{location.href=`mailto:${CFG.email}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b)}`};
+const AQ=[
+["About you",[["fn","Full name","t"],["fe","Email","e"],["fcit","Country of citizenship","t"],["fres","Country you live in now","t"],["fage","Age",["Under 18","18–24","25–29","30–34","35–39","40–44","45 or older"]],["fms","Marital status",["Single","Married or common-law","Separated","Divorced","Widowed"]]]],
+["Your goal",[["fp","What do you want to do in Canada?",["Work","Study","Visit or transit","Live permanently","Join family in Canada"]],["fstay","How long do you plan to stay?",["Less than 6 months","6 months to 2 years","More than 2 years","Permanently"]],["fref","Have you been refused a visa or permit before?",["No","Yes","Not sure"]]]],
+["Language and education",[["fl","Language test taken",["English test (IELTS or CELPIP)","French test (TEF or TCF)","Both","Not yet"]],["flv","Language level",["Not tested","Basic","Intermediate","Advanced"]],["fedu","Highest education",["Secondary or less","One-year diploma","Two-year diploma","Bachelor’s degree","Two or more degrees","Master’s degree","Doctorate"]]]],
+["Work and funds",[["fx","Years of skilled work in the last 10 years",["None","Less than 1","1–2","3–5","6 or more"]],["focc","Your occupation","t"],["ffund","Funds available to you",["Under CA$5,000","CA$5,000–15,000","CA$15,000–30,000","Over CA$30,000","Prefer not to say"]]]],
+["Ties to Canada",[["ffam","Family in Canada who is a citizen or permanent resident",["None","Spouse or partner","Parent","Child","Sibling","Other relative"]],["fjob","Job offer from a Canadian employer",["No","Yes","Looking now"]],["fcode","Personal Reference Code from Come to Canada (optional)","t"],["fm","Anything else we should know","m"]]]
+];
+$("aform").innerHTML=AQ.map(s=>`<h3 class="full">${s[0]}</h3>`+s[1].map(f=>{const id=f[0],l=f[1],t=f[2];return `<div${t==="m"?' class="full"':""}><label for="${id}">${l}</label>`+(t==="t"||t==="e"?`<input id="${id}"${t==="e"?' type="email"':""}>`:t==="m"?`<textarea id="${id}"></textarea>`:`<select id="${id}">${t.map(o=>`<option>${o}</option>`).join("")}</select>`)+"</div>"}).join("")).join("");
+const AIDS=AQ.flatMap(s=>s[1].map(f=>f[0]));
+document.addEventListener("click",e=>{const a=e.target.closest("[data-goal]");if(a)$("fp").value=a.dataset.goal});
+$("fsend").onclick=()=>{
+  const n=$("fn").value.trim(),e=$("fe").value.trim();
+  if(!n||!ok(e)){say("fmsg","Enter your full name and a valid email.",false);return}
+  say("fmsg","Your email app is opening. Send the message to complete your assessment request.",true);
+  mail("Free assessment: "+n,AIDS.map(i=>document.querySelector('label[for="'+i+'"]').textContent+": "+($(i).value.trim()||"-")).join("\n"));
+};
+$("csend").onclick=()=>{
+  const n=$("cn").value.trim(),e=$("ce").value.trim(),m=$("cm").value.trim();
+  if(!n||!ok(e)||!m){say("cmsg","Enter your name, a valid email and a message.",false);return}
+  say("cmsg","Your email app is opening. Send the message to reach us.",true);
+  mail("Message from "+n,m+"\n\nReply to: "+e);
+};
+$("asend").onclick=()=>{
+  const n=$("an").value.trim(),e=$("ae").value.trim();
+  if(!n||!ok(e)){say("amsg","Enter your full name and a valid email.",false);return}
+  say("amsg","Your email app is opening. Send the message to confirm your account request.",true);
+  mail("Account request: "+n,`Please confirm my account.\nName: ${n}\nEmail: ${e}`);
+};
+// settings
+function setAnim(on){document.body.classList.toggle("anim",on);$("motion").textContent="Animations: "+(on?"on":"off");$("motion").setAttribute("aria-pressed",on);store.set("jg-anim",on?"1":"0");reveal()}
+$("motion").onclick=()=>setAnim(!document.body.classList.contains("anim"));
+if(store.get("jg-anim")==="0")setAnim(false);
+$("theme").onclick=()=>{const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()==="#0e1823";d.dataset.theme=dark?"light":"dark";store.set("jg-theme",d.dataset.theme)};
+if(store.get("jg-theme"))document.documentElement.dataset.theme=store.get("jg-theme");
+const LANGS=[["en","English"],["fr","Français"],["es","Español"],["pt","Português"],["ar","العربية"],["zh-CN","简体中文"],["zh-TW","繁體中文"],["hi","हिन्दी"],["pa","ਪੰਜਾਬੀ"],["ur","اردو"],["bn","বাংলা"],["tl","Filipino"],["vi","Tiếng Việt"],["ko","한국어"],["ja","日本語"],["ru","Русский"],["uk","Українська"],["fa","فارسی"],["tr","Türkçe"],["it","Italiano"],["de","Deutsch"],["pl","Polski"],["ta","தமிழ்"],["gu","ગુજરાતી"],["ne","नेपाली"],["sw","Kiswahili"],["am","አማርኛ"],["so","Soomaali"],["ro","Română"],["el","Ελληνικά"],["he","עברית"],["id","Bahasa Indonesia"],["th","ไทย"],["nl","Nederlands"]];
+$("lang").innerHTML=LANGS.map(l=>`<option value="${l[0]}">${l[1]}</option>`).join("");
+window.gtInit=()=>{try{new google.translate.TranslateElement({pageLanguage:"en",autoDisplay:false},"gt")}catch(e){}};
+{const g=document.createElement("script");g.src="https://translate.google.com/translate_a/element.js?cb=gtInit";g.async=true;document.head.appendChild(g)}
+$("lang").onchange=()=>{
+  const l=$("lang").value,c=document.querySelector(".goog-te-combo");
+  document.documentElement.dir=["ar","ur","fa","he"].includes(l)?"rtl":"ltr";
+  if(l==="en"){document.cookie="googtrans=;path=/;max-age=0";if(c)location.reload();return}
+  if(c){c.value=l;c.dispatchEvent(new Event("change"))}
+  else window.open("https://translate.google.com/translate?sl=en&tl="+encodeURIComponent(l)+"&u="+encodeURIComponent(location.href),"_blank","noopener");
+};
+const EXPLORE=[
+["Western Canada","Mountains, Pacific coast and the cities of British Columbia and Alberta.","Illustration of snowy mountains",`<rect width="300" height="140" fill="#cfe2f5"/><path d="M0 140V92l48-52 36 30 52-58 64 74 38-30 62 52V140z" fill="#6f8fb3"/><path d="M0 140V112l70-34 56 34 60-44 114 44V140z" fill="#2f5d8a"/><path d="M136 12l12 16h-24zM48 40l9 12H39z" fill="#fff"/>`],
+["Ontario and Quebec","Toronto, Ottawa, Montréal and Quebec City. Two official languages.","Illustration of a city skyline with a tall tower",`<rect width="300" height="140" fill="#cfe2f5"/><rect y="108" width="300" height="32" fill="#3d6c9c"/><g fill="#31465e"><rect x="30" y="76" width="22" height="32"/><rect x="58" y="60" width="26" height="48"/><rect x="92" y="82" width="20" height="26"/><rect x="190" y="70" width="28" height="38"/><rect x="224" y="88" width="24" height="20"/><rect x="254" y="72" width="20" height="36"/><rect x="146" y="22" width="5" height="86"/><ellipse cx="148.5" cy="62" rx="12" ry="5"/><rect x="147.5" y="6" width="2" height="18"/></g>`],
+["Atlantic Canada","Coastal communities in Nova Scotia, New Brunswick, PEI and Newfoundland and Labrador.","Illustration of a lighthouse by the sea",`<rect width="300" height="140" fill="#d9e9f4"/><rect y="96" width="300" height="44" fill="#2f6f95"/><path d="M0 140V112c60-22 120-6 180-14 50-6 90 6 120 22V140z" fill="#6b5f55"/><path d="M196 104l8-52h14l8 52z" fill="#fff"/><rect x="200" y="82" width="22" height="9" fill="#d52b1e"/><rect x="203" y="62" width="16" height="9" fill="#d52b1e"/><rect x="204" y="44" width="14" height="8" fill="#31465e"/>`],
+["The Prairies","Wide skies, farmland and growing cities in Manitoba, Saskatchewan and Alberta.","Illustration of a farm field under a big sky",`<rect width="300" height="140" fill="#f3e3b5"/><circle cx="232" cy="36" r="16" fill="#f7c948"/><rect y="80" width="300" height="60" fill="#d6a13a"/><g stroke="#b9852a" stroke-width="2"><path d="M0 80h300M0 140L90 80M60 140L120 80M130 140L150 80M200 140L180 80M270 140L210 80"/></g><rect x="40" y="60" width="26" height="20" fill="#a33a2a"/><path d="M36 60l17-14 17 14z" fill="#7a2a1e"/>`]
+];
+$("explore").innerHTML=EXPLORE.map(x=>`<figure class="card rv"><svg viewBox="0 0 300 140" role="img" aria-label="${esc(x[2])}">${x[3]}</svg><figcaption><b>${esc(x[0])}</b><br><span>${esc(x[1])}</span></figcaption></figure>`).join("");
+const credRows=[["Authorized representative",CFG.repName],["Licence or member number",CFG.licence],["Business registration",CFG.regNo],["Office address",CFG.address],["Phone",CFG.phone]].filter(r=>r[1]);
+$("cred").innerHTML=`<div class="card prog"><h3>Who you are working with</h3>${credRows.map(r=>`<p><b>${esc(r[0])}:</b> <span translate="no">${esc(r[1])}</span></p>`).join("")}<p>Only an authorized representative may charge for Canadian immigration advice: a licensed consultant (RCIC) in good standing with the College of Immigration and Citizenship Consultants, a lawyer who belongs to a Canadian law society, or a Quebec notary. <a href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener">Check the CICC register</a> or <a href="https://www.canada.ca/immigration-representative" target="_blank" rel="noopener">read the IRCC guidance</a> before you pay anyone.</p></div>`;
+if(!CFG.demo)document.querySelectorAll(".demo").forEach(e=>e.style.display="none");
+if(CFG.heroImage)document.querySelector(".hero").style.background="linear-gradient(rgba(10,18,27,.72),rgba(10,18,27,.72)),url("+CFG.heroImage+") center/cover";
+route();
+</script>
+</body>
+</html>
